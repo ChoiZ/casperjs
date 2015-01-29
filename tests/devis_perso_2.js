@@ -1,5 +1,5 @@
 casper.test.begin('Test devis perso type : dépliant', 17, function suite(test) {
-    casper.start("http://localhost:8080/devis-impression-carte-de-voeux", function() {
+    casper.start(casper.cli.get("url")+"/devis-impression-carte-de-voeux", function() {
         test.assertExists('#proj_name', 'Nom de votre projet *');
         test.assertExists('#prod_format', 'Format *');
         test.assertExists('#prod_other_length', 'Autre format (ouvert) longueur (mm)');
